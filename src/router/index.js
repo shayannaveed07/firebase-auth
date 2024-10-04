@@ -30,7 +30,7 @@ if(to.path === '/login' && auth.currentUser){
   next('/')
   return
 }
-if(to.matched.some(record => record.meta.requiresAuth) &&!auth.currentUser){
+if(to.matched.some(record => record.meta.requiresAuth) && !auth.currentUser){
   next('/login')
   return
 }
